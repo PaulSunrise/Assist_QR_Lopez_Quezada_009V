@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'nuevouser',
+    loadChildren: () => import('./pages/nuevouser/nuevouser.module').then( m => m.NuevouserPageModule)
+  },
+  {
+    path: 'olvido',
+    loadChildren: () => import('./pages/olvido/olvido.module').then( m => m.OlvidoPageModule)
+  },
+  {
+    path: 'sobre',
+    loadChildren: () => import('./pages/sobre/sobre.module').then( m => m.SobrePageModule)
+  },
+  {
+    path: 'vivoduoc',
+    loadChildren: () => import('./pages/vivoduoc/vivoduoc.module').then( m => m.VivoduocPageModule)
+  },
+  {
+    path: 'ingresoapp',
+    loadChildren: () => import('./pages/ingresoapp/ingresoapp.module').then( m => m.IngresoappPageModule)
+  },
 ];
 
 @NgModule({
